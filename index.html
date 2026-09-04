@@ -1,20 +1,441 @@
-</div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-</section>
+  <meta name="description" content="Aditya Gupta — Strategy Director at NORTH. Direction for Ideas.">
 
-<footer class="footer">
+  <title>ADITYA GUPTA — NORTH</title>
 
-<span>
-NORTH — DIRECTION FOR IDEAS.
-</span>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
-<a href="mailto:aditya@north.agency">
-aditya@north.agency
-</a>
+    :root {
+      --ink: #111111;
+      --paper: #f7f6f2;
+      --muted: #777777;
+      --line: #d9d8d2;
+      --white: #ffffff;
+    }
 
-</footer>
+    body {
+      background: var(--paper);
+      color: var(--ink);
+      font-family: Arial, Helvetica, sans-serif;
+      min-height: 100vh;
+      line-height: 1.5;
+    }
 
-</main>
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .container {
+      width: min(100% - 40px, 900px);
+      margin: 0 auto;
+    }
+
+    /* HEADER */
+
+    header {
+      padding: 28px 0;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .header-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .brand {
+      font-size: 22px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+    }
+
+    .tagline {
+      font-size: 11px;
+      letter-spacing: 0.16em;
+      color: var(--muted);
+      text-transform: uppercase;
+      text-align: right;
+    }
+
+    /* HERO */
+
+    .hero {
+      padding: 80px 0 60px;
+    }
+
+    .eyebrow {
+      font-size: 11px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 18px;
+    }
+
+    h1 {
+      font-size: clamp(48px, 10vw, 92px);
+      line-height: 0.95;
+      letter-spacing: -0.055em;
+      font-weight: 700;
+      margin-bottom: 18px;
+    }
+
+    .role {
+      font-size: 15px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+
+    /* CONTACT BUTTONS */
+
+    .actions {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1px;
+      background: var(--line);
+      border: 1px solid var(--line);
+      margin: 45px 0 70px;
+    }
+
+    .action {
+      background: var(--paper);
+      padding: 22px 20px;
+      transition: 0.2s ease;
+    }
+
+    .action:hover {
+      background: var(--white);
+      transform: translateY(-1px);
+    }
+
+    .action-label {
+      display: block;
+      font-size: 10px;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 5px;
+    }
+
+    .action-value {
+      font-size: 15px;
+      font-weight: 600;
+    }
+
+    /* SECTIONS */
+
+    section {
+      border-top: 1px solid var(--line);
+      padding: 50px 0;
+    }
+
+    .section-label {
+      font-size: 10px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 22px;
+    }
+
+    .about {
+      font-size: clamp(22px, 4vw, 34px);
+      line-height: 1.25;
+      letter-spacing: -0.02em;
+      max-width: 760px;
+    }
+
+    /* CAPABILITIES */
+
+    .capabilities {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      border-top: 1px solid var(--line);
+    }
+
+    .capability {
+      padding: 22px 0;
+      border-bottom: 1px solid var(--line);
+      font-size: 15px;
+    }
+
+    .capability:nth-child(odd) {
+      margin-right: 30px;
+    }
+
+    /* FOOTER */
+
+    footer {
+      border-top: 1px solid var(--line);
+      padding: 30px 0 45px;
+      margin-top: 20px;
+    }
+
+    .footer-inner {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      align-items: flex-end;
+    }
+
+    .footer-brand {
+      font-size: 18px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+    }
+
+    .footer-email {
+      font-size: 13px;
+      color: var(--muted);
+    }
+
+    /* MOBILE */
+
+    @media (max-width: 600px) {
+
+      .container {
+        width: min(100% - 28px, 900px);
+      }
+
+      header {
+        padding: 22px 0;
+      }
+
+      .header-inner {
+        align-items: flex-start;
+      }
+
+      .brand {
+        font-size: 19px;
+      }
+
+      .tagline {
+        font-size: 8px;
+        line-height: 1.5;
+      }
+
+      .hero {
+        padding: 60px 0 35px;
+      }
+
+      h1 {
+        font-size: 52px;
+      }
+
+      .actions {
+        grid-template-columns: 1fr;
+        margin: 35px 0 55px;
+      }
+
+      .action {
+        padding: 20px;
+      }
+
+      .about {
+        font-size: 25px;
+      }
+
+      .capabilities {
+        grid-template-columns: 1fr;
+      }
+
+      .capability:nth-child(odd) {
+        margin-right: 0;
+      }
+
+      .footer-inner {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- HEADER -->
+
+  <header>
+    <div class="container header-inner">
+      <div class="brand">NORTH</div>
+
+      <div class="tagline">
+        Direction for Ideas.
+      </div>
+    </div>
+  </header>
+
+
+  <!-- MAIN -->
+
+  <main>
+
+    <div class="container">
+
+      <!-- HERO -->
+
+      <div class="hero">
+
+        <div class="eyebrow">
+          Strategy Director
+        </div>
+
+        <h1>
+          ADITYA<br>
+          GUPTA
+        </h1>
+
+        <div class="role">
+          NORTH — Advertising & Creative Agency
+        </div>
+
+      </div>
+
+
+      <!-- CONTACT ACTIONS -->
+
+      <div class="actions">
+
+        <a class="action" href="tel:+919512112129">
+          <span class="action-label">Call</span>
+          <span class="action-value">+91 95121 12129</span>
+        </a>
+
+        <a class="action" href="mailto:aditya@north.agency">
+          <span class="action-label">Email</span>
+          <span class="action-value">aditya@north.agency</span>
+        </a>
+
+        <a class="action"
+           href="https://wa.me/919512112129"
+           target="_blank"
+           rel="noopener">
+          <span class="action-label">WhatsApp</span>
+          <span class="action-value">Message Aditya</span>
+        </a>
+
+        <a class="action"
+           href="https://www.linkedin.com/company/northagency/"
+           target="_blank"
+           rel="noopener">
+          <span class="action-label">LinkedIn</span>
+          <span class="action-value">@northagency</span>
+        </a>
+
+        <a class="action" href="Aditya_Gupta_NORTH.vcf">
+          <span class="action-label">Contact</span>
+          <span class="action-value">Save Contact</span>
+        </a>
+
+        <a class="action"
+           href="https://www.north.agency"
+           target="_blank"
+           rel="noopener">
+          <span class="action-label">Website</span>
+          <span class="action-value">north.agency</span>
+        </a>
+
+        <a class="action"
+           href="https://www.instagram.com/northagency/"
+           target="_blank"
+           rel="noopener">
+          <span class="action-label">Instagram</span>
+          <span class="action-value">@northagency</span>
+        </a>
+
+      </div>
+
+
+      <!-- ABOUT -->
+
+      <section>
+
+        <div class="section-label">
+          About NORTH
+        </div>
+
+        <p class="about">
+          NORTH is an advertising and creative agency built around one idea:
+          give brands a clear direction, then make people move.
+        </p>
+
+      </section>
+
+
+      <!-- CAPABILITIES -->
+
+      <section>
+
+        <div class="section-label">
+          Capabilities
+        </div>
+
+        <div class="capabilities">
+
+          <div class="capability">
+            01 — Brand Strategy
+          </div>
+
+          <div class="capability">
+            02 — Creative Direction
+          </div>
+
+          <div class="capability">
+            03 — Campaigns
+          </div>
+
+          <div class="capability">
+            04 — Digital
+          </div>
+
+          <div class="capability">
+            05 — Content
+          </div>
+
+        </div>
+
+      </section>
+
+    </div>
+
+  </main>
+
+
+  <!-- FOOTER -->
+
+  <footer>
+
+    <div class="container footer-inner">
+
+      <div>
+        <div class="footer-brand">
+          NORTH
+        </div>
+
+        <div class="footer-email">
+          DIRECTION FOR IDEAS.
+        </div>
+      </div>
+
+      <a class="footer-email"
+         href="mailto:aditya@north.agency">
+        aditya@north.agency
+      </a>
+
+    </div>
+
+  </footer>
 
 </body>
 </html>
