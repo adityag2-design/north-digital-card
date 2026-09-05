@@ -1,441 +1,1489 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#111111">
 
-  <meta name="description" content="Aditya Gupta — Strategy Director at NORTH. Direction for Ideas.">
+<title>NORTH CORPORATION — Aditya Gupta</title>
 
-  <title>ADITYA GUPTA — NORTH</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-  <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet">
 
-    :root {
-      --ink: #111111;
-      --paper: #f7f6f2;
-      --muted: #777777;
-      --line: #d9d8d2;
-      --white: #ffffff;
-    }
+<style>
 
-    body {
-      background: var(--paper);
-      color: var(--ink);
-      font-family: Arial, Helvetica, sans-serif;
-      min-height: 100vh;
-      line-height: 1.5;
-    }
+:root {
+    --black: #111111;
+    --cream: #F7F4ED;
+    --soft: #E9E5DC;
+    --grey: #77736B;
+    --light-grey: #B9B4AA;
+    --line: rgba(17,17,17,0.14);
+}
 
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
 
-    .container {
-      width: min(100% - 40px, 900px);
-      margin: 0 auto;
-    }
+html {
+    scroll-behavior: smooth;
+}
 
-    /* HEADER */
+body {
+    background: #111111;
+    color: var(--black);
+    font-family: "DM Sans", Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+}
 
-    header {
-      padding: 28px 0;
-      border-bottom: 1px solid var(--line);
-    }
+a {
+    color: inherit;
+    text-decoration: none;
+}
 
-    .header-inner {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 20px;
-    }
+.page {
+    width: 100%;
+    max-width: 620px;
+    margin: 0 auto;
+    overflow: hidden;
+    background: var(--cream);
+}
 
-    .brand {
-      font-size: 22px;
-      font-weight: 700;
-      letter-spacing: 0.08em;
-    }
+/* =====================================================
+   HERO
+===================================================== */
 
-    .tagline {
-      font-size: 11px;
-      letter-spacing: 0.16em;
-      color: var(--muted);
-      text-transform: uppercase;
-      text-align: right;
-    }
+.hero {
+    min-height: 720px;
+    padding: 32px 28px 0;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
 
-    /* HERO */
+.brand {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    position: relative;
+    z-index: 10;
+}
+
+.logo {
+    font-size: 24px;
+    line-height: 1;
+    font-weight: 700;
+    letter-spacing: 0.25em;
+}
+
+.logo-sub {
+    margin-top: 7px;
+    font-size: 8px;
+    line-height: 1;
+    letter-spacing: 0.21em;
+    color: var(--grey);
+    text-transform: uppercase;
+}
+
+.north-mark {
+    width: 35px;
+    height: 35px;
+    border: 1px solid var(--black);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.hero-content {
+    margin-top: 105px;
+    position: relative;
+    z-index: 5;
+}
+
+.eyebrow {
+    font-size: 9px;
+    line-height: 1;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--grey);
+    margin-bottom: 19px;
+}
+
+.name {
+    font-size: clamp(48px, 12vw, 72px);
+    line-height: 0.91;
+    letter-spacing: -0.065em;
+    font-weight: 600;
+}
+
+.role {
+    margin-top: 20px;
+    font-size: 10px;
+    line-height: 1;
+    letter-spacing: 0.19em;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.tagline {
+    margin-top: 25px;
+    font-family: "Playfair Display", Georgia, serif;
+    font-style: italic;
+    font-size: 20px;
+    line-height: 1.25;
+}
+
+/* =====================================================
+   MOUNTAINS
+===================================================== */
+
+.mountains {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 340px;
+    overflow: hidden;
+}
+
+.sun {
+    position: absolute;
+    width: 82px;
+    height: 82px;
+    border-radius: 50%;
+    border: 1px solid rgba(17,17,17,0.24);
+    right: 21%;
+    bottom: 165px;
+    z-index: 1;
+}
+
+.mountain-back {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 240px;
+    background: #DED9CF;
+
+    clip-path: polygon(
+        0 74%,
+        10% 55%,
+        19% 65%,
+        33% 30%,
+        43% 53%,
+        55% 16%,
+        67% 57%,
+        79% 36%,
+        90% 60%,
+        100% 42%,
+        100% 100%,
+        0 100%
+    );
+}
+
+.mountain-front {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 220px;
+    background: var(--black);
+
+    clip-path: polygon(
+        0 75%,
+        14% 46%,
+        26% 66%,
+        39% 35%,
+        50% 69%,
+        62% 28%,
+        75% 62%,
+        87% 40%,
+        100% 66%,
+        100% 100%,
+        0 100%
+    );
+}
+
+/* =====================================================
+   SOCIAL ICONS
+===================================================== */
+
+.socials {
+    position: absolute;
+    bottom: 28px;
+    left: 28px;
+    right: 28px;
+    z-index: 20;
+
+    display: flex;
+    justify-content: space-between;
+    gap: 8px;
+}
+
+.social {
+    width: 46px;
+    height: 46px;
+    background: var(--cream);
+    border: 1px solid rgba(17,17,17,0.18);
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transition:
+        transform 0.25s ease,
+        background 0.25s ease,
+        color 0.25s ease;
+}
+
+.social:hover {
+    transform: translateY(-4px);
+    background: var(--black);
+    color: var(--cream);
+}
+
+.social svg {
+    width: 17px;
+    height: 17px;
+}
+
+/* =====================================================
+   GENERAL SECTIONS
+===================================================== */
+
+.section {
+    padding: 82px 28px;
+}
+
+.section-label {
+    font-size: 9px;
+    line-height: 1;
+    letter-spacing: 0.23em;
+    color: var(--grey);
+    text-transform: uppercase;
+    margin-bottom: 27px;
+}
+
+.about-title {
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: 34px;
+    line-height: 1.14;
+    font-weight: 500;
+    letter-spacing: -0.025em;
+    margin-bottom: 25px;
+}
+
+.about-text {
+    font-size: 14px;
+    line-height: 1.85;
+    color: #4F4C46;
+    max-width: 520px;
+}
+
+/* =====================================================
+   CAPABILITIES
+===================================================== */
+
+.capabilities {
+    border-top: 1px solid var(--line);
+}
+
+.capability {
+    border-bottom: 1px solid var(--line);
+}
+
+.capability button {
+    width: 100%;
+    padding: 24px 0;
+
+    border: none;
+    background: transparent;
+
+    color: var(--black);
+
+    display: flex;
+    align-items: center;
+
+    font-family: inherit;
+    cursor: pointer;
+    text-align: left;
+}
+
+.number {
+    width: 34px;
+    flex-shrink: 0;
+
+    font-size: 9px;
+    color: var(--grey);
+    letter-spacing: 0.1em;
+}
+
+.capability-title {
+    flex: 1;
+
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: -0.01em;
+}
+
+.arrow {
+    width: 25px;
+
+    font-size: 21px;
+    font-weight: 300;
+
+    transition: transform 0.3s ease;
+}
+
+.capability.open .arrow {
+    transform: rotate(45deg);
+}
+
+.capability-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.45s ease;
+}
+
+.capability-content p {
+    padding: 0 38px 26px 34px;
+
+    font-size: 13px;
+    line-height: 1.75;
+    color: var(--grey);
+}
+
+/* =====================================================
+   CONNECT
+===================================================== */
+
+.connect {
+    background: var(--soft);
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin-top: 30px;
+}
+
+.contact-card {
+    min-height: 135px;
+
+    padding: 22px;
+
+    border: 1px solid rgba(17,17,17,0.13);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    transition:
+        transform 0.25s ease,
+        background 0.25s ease;
+}
+
+.contact-card:hover {
+    transform: translateY(-3px);
+    background: var(--cream);
+}
+
+.contact-icon {
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact-icon svg {
+    width: 19px;
+    height: 19px;
+}
+
+.contact-name {
+    margin-top: 18px;
+
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+}
+
+.contact-detail {
+    margin-top: 5px;
+
+    font-size: 10px;
+    line-height: 1.4;
+    color: var(--grey);
+
+    word-break: break-word;
+}
+
+/* =====================================================
+   FINAL BLACK SECTION
+===================================================== */
+
+.final {
+    min-height: 520px;
+
+    background: var(--black);
+    color: var(--cream);
+
+    position: relative;
+    overflow: hidden;
+
+    padding: 70px 28px 30px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.final-label {
+    position: relative;
+    z-index: 5;
+
+    font-size: 9px;
+    letter-spacing: 0.22em;
+    opacity: 0.48;
+}
+
+.final-title {
+    position: relative;
+    z-index: 5;
+
+    font-size: clamp(50px, 12vw, 76px);
+    line-height: 0.9;
+    letter-spacing: -0.065em;
+    font-weight: 500;
+}
+
+.final-title em {
+    font-family: "Playfair Display", Georgia, serif;
+    font-weight: 500;
+}
+
+.final-mountains {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    height: 255px;
+}
+
+.final-mountain {
+    position: absolute;
+    bottom: -30px;
+    left: -5%;
+
+    width: 120%;
+    height: 235px;
+
+    background: #292929;
+
+    clip-path: polygon(
+        0 76%,
+        14% 46%,
+        25% 67%,
+        40% 29%,
+        51% 67%,
+        63% 35%,
+        77% 64%,
+        88% 41%,
+        100% 68%,
+        100% 100%,
+        0 100%
+    );
+}
+
+.final-mountain-two {
+    position: absolute;
+    bottom: -45px;
+    right: -20%;
+
+    width: 100%;
+    height: 205px;
+
+    background: #1D1D1D;
+
+    clip-path: polygon(
+        0 72%,
+        19% 43%,
+        35% 65%,
+        53% 26%,
+        70% 64%,
+        84% 42%,
+        100% 68%,
+        100% 100%,
+        0 100%
+    );
+}
+
+.footer {
+    position: relative;
+    z-index: 10;
+
+    font-size: 8px;
+    letter-spacing: 0.16em;
+    opacity: 0.4;
+    text-transform: uppercase;
+}
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 430px) {
 
     .hero {
-      padding: 80px 0 60px;
+        min-height: 680px;
+        padding-left: 22px;
+        padding-right: 22px;
     }
 
-    .eyebrow {
-      font-size: 11px;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
-      color: var(--muted);
-      margin-bottom: 18px;
+    .hero-content {
+        margin-top: 90px;
     }
 
-    h1 {
-      font-size: clamp(48px, 10vw, 92px);
-      line-height: 0.95;
-      letter-spacing: -0.055em;
-      font-weight: 700;
-      margin-bottom: 18px;
+    .name {
+        font-size: 48px;
     }
 
-    .role {
-      font-size: 15px;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: var(--muted);
+    .socials {
+        left: 22px;
+        right: 22px;
+        gap: 6px;
     }
 
-    /* CONTACT BUTTONS */
-
-    .actions {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 1px;
-      background: var(--line);
-      border: 1px solid var(--line);
-      margin: 45px 0 70px;
+    .social {
+        width: 42px;
+        height: 42px;
     }
 
-    .action {
-      background: var(--paper);
-      padding: 22px 20px;
-      transition: 0.2s ease;
+    .section {
+        padding: 65px 22px;
     }
 
-    .action:hover {
-      background: var(--white);
-      transform: translateY(-1px);
+    .about-title {
+        font-size: 31px;
     }
 
-    .action-label {
-      display: block;
-      font-size: 10px;
-      letter-spacing: 0.15em;
-      text-transform: uppercase;
-      color: var(--muted);
-      margin-bottom: 5px;
+    .final {
+        padding-left: 22px;
+        padding-right: 22px;
     }
 
-    .action-value {
-      font-size: 15px;
-      font-weight: 600;
+    .final-title {
+        font-size: 50px;
     }
+}
 
-    /* SECTIONS */
-
-    section {
-      border-top: 1px solid var(--line);
-      padding: 50px 0;
-    }
-
-    .section-label {
-      font-size: 10px;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
-      color: var(--muted);
-      margin-bottom: 22px;
-    }
-
-    .about {
-      font-size: clamp(22px, 4vw, 34px);
-      line-height: 1.25;
-      letter-spacing: -0.02em;
-      max-width: 760px;
-    }
-
-    /* CAPABILITIES */
-
-    .capabilities {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      border-top: 1px solid var(--line);
-    }
-
-    .capability {
-      padding: 22px 0;
-      border-bottom: 1px solid var(--line);
-      font-size: 15px;
-    }
-
-    .capability:nth-child(odd) {
-      margin-right: 30px;
-    }
-
-    /* FOOTER */
-
-    footer {
-      border-top: 1px solid var(--line);
-      padding: 30px 0 45px;
-      margin-top: 20px;
-    }
-
-    .footer-inner {
-      display: flex;
-      justify-content: space-between;
-      gap: 20px;
-      align-items: flex-end;
-    }
-
-    .footer-brand {
-      font-size: 18px;
-      font-weight: 700;
-      letter-spacing: 0.08em;
-    }
-
-    .footer-email {
-      font-size: 13px;
-      color: var(--muted);
-    }
-
-    /* MOBILE */
-
-    @media (max-width: 600px) {
-
-      .container {
-        width: min(100% - 28px, 900px);
-      }
-
-      header {
-        padding: 22px 0;
-      }
-
-      .header-inner {
-        align-items: flex-start;
-      }
-
-      .brand {
-        font-size: 19px;
-      }
-
-      .tagline {
-        font-size: 8px;
-        line-height: 1.5;
-      }
-
-      .hero {
-        padding: 60px 0 35px;
-      }
-
-      h1 {
-        font-size: 52px;
-      }
-
-      .actions {
-        grid-template-columns: 1fr;
-        margin: 35px 0 55px;
-      }
-
-      .action {
-        padding: 20px;
-      }
-
-      .about {
-        font-size: 25px;
-      }
-
-      .capabilities {
-        grid-template-columns: 1fr;
-      }
-
-      .capability:nth-child(odd) {
-        margin-right: 0;
-      }
-
-      .footer-inner {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-    }
-  </style>
+</style>
 </head>
+
 
 <body>
 
-  <!-- HEADER -->
-
-  <header>
-    <div class="container header-inner">
-      <div class="brand">NORTH</div>
-
-      <div class="tagline">
-        Direction for Ideas.
-      </div>
-    </div>
-  </header>
+<div class="page">
 
 
-  <!-- MAIN -->
+<!-- =====================================================
+     HERO
+===================================================== -->
 
-  <main>
+<section class="hero">
 
-    <div class="container">
+    <div class="brand">
 
-      <!-- HERO -->
+        <div>
+            <div class="logo">NORTH</div>
 
-      <div class="hero">
-
-        <div class="eyebrow">
-          Strategy Director
+            <div class="logo-sub">
+                Corporation · Direction for Ideas
+            </div>
         </div>
 
-        <h1>
-          ADITYA<br>
-          GUPTA
+        <div class="north-mark">
+            N
+        </div>
+
+    </div>
+
+
+    <div class="hero-content">
+
+        <div class="eyebrow">
+            Independent Creative Company
+        </div>
+
+        <h1 class="name">
+            ADITYA<br>
+            GUPTA
         </h1>
 
         <div class="role">
-          NORTH — Advertising & Creative Agency
+            Strategy Director · NORTH Corporation
         </div>
 
-      </div>
-
-
-      <!-- CONTACT ACTIONS -->
-
-      <div class="actions">
-
-        <a class="action" href="tel:+919512112129">
-          <span class="action-label">Call</span>
-          <span class="action-value">+91 95121 12129</span>
-        </a>
-
-        <a class="action" href="mailto:aditya@north.agency">
-          <span class="action-label">Email</span>
-          <span class="action-value">aditya@north.agency</span>
-        </a>
-
-        <a class="action"
-           href="https://wa.me/919512112129"
-           target="_blank"
-           rel="noopener">
-          <span class="action-label">WhatsApp</span>
-          <span class="action-value">Message Aditya</span>
-        </a>
-
-        <a class="action"
-           href="https://www.linkedin.com/company/northagency/"
-           target="_blank"
-           rel="noopener">
-          <span class="action-label">LinkedIn</span>
-          <span class="action-value">@northagency</span>
-        </a>
-
-        <a class="action" href="Aditya_Gupta_NORTH.vcf">
-          <span class="action-label">Contact</span>
-          <span class="action-value">Save Contact</span>
-        </a>
-
-        <a class="action"
-           href="https://www.north.agency"
-           target="_blank"
-           rel="noopener">
-          <span class="action-label">Website</span>
-          <span class="action-value">north.agency</span>
-        </a>
-
-        <a class="action"
-           href="https://www.instagram.com/northagency/"
-           target="_blank"
-           rel="noopener">
-          <span class="action-label">Instagram</span>
-          <span class="action-value">@northagency</span>
-        </a>
-
-      </div>
-
-
-      <!-- ABOUT -->
-
-      <section>
-
-        <div class="section-label">
-          About NORTH
+        <div class="tagline">
+            Ideas. Strategy. Impact.
         </div>
-
-        <p class="about">
-          NORTH is an advertising and creative agency built around one idea:
-          give brands a clear direction, then make people move.
-        </p>
-
-      </section>
-
-
-      <!-- CAPABILITIES -->
-
-      <section>
-
-        <div class="section-label">
-          Capabilities
-        </div>
-
-        <div class="capabilities">
-
-          <div class="capability">
-            01 — Brand Strategy
-          </div>
-
-          <div class="capability">
-            02 — Creative Direction
-          </div>
-
-          <div class="capability">
-            03 — Campaigns
-          </div>
-
-          <div class="capability">
-            04 — Digital
-          </div>
-
-          <div class="capability">
-            05 — Content
-          </div>
-
-        </div>
-
-      </section>
 
     </div>
 
-  </main>
+
+    <div class="sun"></div>
 
 
-  <!-- FOOTER -->
+    <div class="mountains">
+        <div class="mountain-back"></div>
+        <div class="mountain-front"></div>
+    </div>
 
-  <footer>
 
-    <div class="container footer-inner">
+    <!-- =================================================
+         SOCIAL ICONS
+    ================================================= -->
 
-      <div>
-        <div class="footer-brand">
-          NORTH
+    <div class="socials">
+
+
+        <!-- CALL -->
+
+        <a
+            class="social"
+            href="tel:+919512112129"
+            aria-label="Call Aditya"
+        >
+
+            <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.7"
+            >
+
+                <path d="
+                    M6.5 3.5
+                    l3 1.5
+                    -1.7 4
+                    -2.1.8
+                    c1.2 2.5 3.1 4.4 5.6 5.6
+                    l.8-2.1
+                    4-1.7
+                    1.5 3
+                    c.3.7 0 1.5-.6 1.8l-1.9.9
+                    c-.8.4-1.7.5-2.5.2
+                    -4.8-1.8-8.7-5.7-10.5-10.5
+                    -.3-.8-.2-1.7.2-2.5
+                    l.9-1.9
+                    c.3-.6 1.1-.9 1.8-.6z
+                "/>
+
+            </svg>
+
+        </a>
+
+
+        <!-- EMAIL -->
+
+        <a
+            class="social"
+            href="mailto:aditya@north.agency"
+            aria-label="Email Aditya"
+        >
+
+            <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.7"
+            >
+
+                <rect
+                    x="3"
+                    y="5"
+                    width="18"
+                    height="14"
+                    rx="1.5"
+                />
+
+                <path d="M4 7l8 6 8-6"/>
+
+            </svg>
+
+        </a>
+
+
+        <!-- WHATSAPP -->
+
+        <a
+            class="social"
+            href="https://wa.me/919512112129"
+            aria-label="WhatsApp"
+        >
+
+            <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.7"
+            >
+
+                <path d="
+                    M20 11.5
+                    a8.2 8.2 0 0 1-12.1 7.2
+                    L4 20
+                    l1.3-3.7
+                    A8.2 8.2 0 1 1 20 11.5z
+                "/>
+
+                <path d="
+                    M8.5 8.3
+                    c.3-.4.6-.4.9-.1
+                    l1 1
+                    c.2.2.2.5.1.7
+                    l-.5.8
+                    c.8 1.2 1.5 1.8 2.8 2.5
+                    l.7-.5
+                    c.2-.2.5-.2.7 0
+                    l1 1
+                    c.3.3.3.6-.1.9
+                    l-.7.5
+                    c-.5.3-1.1.4-1.7.2
+                    -2.5-.9-4.5-2.9-5.4-5.4
+                    -.2-.6-.1-1.2.2-1.7
+                    l.5-.7z
+                "/>
+
+            </svg>
+
+        </a>
+
+
+        <!-- LINKEDIN -->
+
+        <a
+            class="social"
+            href="https://www.linkedin.com/in/north-corporation-6a3015211"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="LinkedIn"
+        >
+
+            <svg
+                viewBox="0 0 24 24"
+                fill="currentColor"
+            >
+
+                <path d="
+                    M5.2 7.5
+                    A1.7 1.7 0 1 0 5.2 4
+                    a1.7 1.7 0 0 0 0 3.5z
+
+                    M3.7 9h3v10h-3V9z
+
+                    M8.6 9h2.9v1.4h.1
+                    c.4-.8 1.4-1.7 3-1.7
+                    3.2 0 3.8 2 3.8 4.7V19h-3v-5
+                    c0-1.2 0-2.8-1.7-2.8
+                    -1.7 0-2 1.3-2 2.7V19h-3V9z
+                "/>
+
+            </svg>
+
+        </a>
+
+
+        <!-- INSTAGRAM -->
+
+        <a
+            class="social"
+            href="https://www.instagram.com/northcorporation/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Instagram"
+        >
+
+            <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.7"
+            >
+
+                <rect
+                    x="4"
+                    y="4"
+                    width="16"
+                    height="16"
+                    rx="4"
+                />
+
+                <circle
+                    cx="12"
+                    cy="12"
+                    r="3.5"
+                />
+
+                <circle
+                    cx="17.2"
+                    cy="6.8"
+                    r="0.8"
+                    fill="currentColor"
+                    stroke="none"
+                />
+
+            </svg>
+
+        </a>
+
+
+        <!-- WEBSITE — COMING SOON -->
+
+        <div
+            class="social"
+            aria-label="Website coming soon"
+            title="Website coming soon"
+            style="cursor: default;"
+        >
+
+            <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.7"
+            >
+
+                <circle
+                    cx="12"
+                    cy="12"
+                    r="8.5"
+                />
+
+                <path d="
+                    M3.8 12h16.4
+
+                    M12 3.5
+                    c2 2.2 3 5 3 8.5
+                    s-1 6.3-3 8.5
+
+                    c-2-2.2-3-5-3-8.5
+                    s1-6.3 3-8.5z
+                "/>
+
+            </svg>
+
         </div>
-
-        <div class="footer-email">
-          DIRECTION FOR IDEAS.
-        </div>
-      </div>
-
-      <a class="footer-email"
-         href="mailto:aditya@north.agency">
-        aditya@north.agency
-      </a>
 
     </div>
 
-  </footer>
+</section>
+
+
+
+<!-- =====================================================
+     ABOUT NORTH
+===================================================== -->
+
+<section class="section">
+
+    <div class="section-label">
+        01 — About North
+    </div>
+
+
+    <h2 class="about-title">
+        We find the direction<br>
+        behind the idea.
+    </h2>
+
+
+    <p class="about-text">
+
+        NORTH CORPORATION is an independent creative company
+        built around strategy, ideas and meaningful brand direction.
+
+        We help businesses find clarity, create distinction
+        and move forward with purpose.
+
+    </p>
+
+</section>
+
+
+
+<!-- =====================================================
+     CAPABILITIES
+===================================================== -->
+
+<section class="section">
+
+    <div class="section-label">
+        02 — Our Capabilities
+    </div>
+
+
+    <div class="capabilities">
+
+
+        <!-- BRAND STRATEGY -->
+
+        <div class="capability">
+
+            <button onclick="toggleCapability(this)">
+
+                <span class="number">
+                    01
+                </span>
+
+                <span class="capability-title">
+                    Brand Strategy
+                </span>
+
+                <span class="arrow">
+                    +
+                </span>
+
+            </button>
+
+
+            <div class="capability-content">
+
+                <p>
+                    Defining positioning, identity and strategic
+                    direction to give brands a clear place in the market.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- CREATIVE DIRECTION -->
+
+        <div class="capability">
+
+            <button onclick="toggleCapability(this)">
+
+                <span class="number">
+                    02
+                </span>
+
+                <span class="capability-title">
+                    Creative Direction
+                </span>
+
+                <span class="arrow">
+                    +
+                </span>
+
+            </button>
+
+
+            <div class="capability-content">
+
+                <p>
+                    Turning strategic thinking into distinctive
+                    creative ideas, visual systems and brand experiences.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- CAMPAIGN STRATEGY -->
+
+        <div class="capability">
+
+            <button onclick="toggleCapability(this)">
+
+                <span class="number">
+                    03
+                </span>
+
+                <span class="capability-title">
+                    Campaign Strategy
+                </span>
+
+                <span class="arrow">
+                    +
+                </span>
+
+            </button>
+
+
+            <div class="capability-content">
+
+                <p>
+                    Building campaigns around a strong central idea,
+                    clear audience insight and measurable objectives.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- DIGITAL -->
+
+        <div class="capability">
+
+            <button onclick="toggleCapability(this)">
+
+                <span class="number">
+                    04
+                </span>
+
+                <span class="capability-title">
+                    Digital & Social
+                </span>
+
+                <span class="arrow">
+                    +
+                </span>
+
+            </button>
+
+
+            <div class="capability-content">
+
+                <p>
+                    Creating digital and social experiences that keep
+                    brands relevant, engaging and culturally connected.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     CONNECT
+===================================================== -->
+
+<section class="section connect">
+
+    <div class="section-label">
+        03 — Let's Connect
+    </div>
+
+
+    <h2 class="about-title">
+        Good ideas deserve<br>
+        a conversation.
+    </h2>
+
+
+    <div class="contact-grid">
+
+
+        <!-- CALL -->
+
+        <a
+            class="contact-card"
+            href="tel:+919512112129"
+        >
+
+            <div class="contact-icon">
+
+                <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.7"
+                >
+
+                    <path d="
+                        M6.5 3.5
+                        l3 1.5
+                        -1.7 4
+                        -2.1.8
+                        c1.2 2.5 3.1 4.4 5.6 5.6
+                        l.8-2.1
+                        4-1.7
+                        1.5 3
+                        c.3.7 0 1.5-.6 1.8-1.3
+                        l-1.9.9
+                        c-.8.4-1.7.5-2.5.2
+                        -4.8-1.8-8.7-5.7-10.5-10.5
+                        -.3-.8-.2-1.7.2-2.5
+                        l.9-1.9
+                        c.3-.6 1.1-.9 1.8-.6z
+                    "/>
+
+                </svg>
+
+            </div>
+
+            <div>
+                <div class="contact-name">
+                    Call
+                </div>
+
+                <div class="contact-detail">
+                    +91 95121 12129
+                </div>
+            </div>
+
+        </a>
+
+
+        <!-- EMAIL -->
+
+        <a
+            class="contact-card"
+            href="mailto:aditya@north.agency"
+        >
+
+            <div class="contact-icon">
+
+                <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.7"
+                >
+
+                    <rect
+                        x="3"
+                        y="5"
+                        width="18"
+                        height="14"
+                        rx="1.5"
+                    />
+
+                    <path d="M4 7l8 6 8-6"/>
+
+                </svg>
+
+            </div>
+
+            <div>
+
+                <div class="contact-name">
+                    Email
+                </div>
+
+                <div class="contact-detail">
+                    aditya@north.agency
+                </div>
+
+            </div>
+
+        </a>
+
+
+        <!-- WHATSAPP -->
+
+        <a
+            class="contact-card"
+            href="https://wa.me/919512112129"
+        >
+
+            <div class="contact-icon">
+
+                <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.7"
+                >
+
+                    <path d="
+                        M20 11.5
+                        a8.2 8.2 0 0 1-12.1 7.2
+                        L4 20
+                        l1.3-3.7
+                        A8.2 8.2 0 1 1 20 11.5z
+                    "/>
+
+                    <path d="
+                        M8.5 8.3
+                        c.3-.4.6-.4.9-.1
+                        l1 1
+                        c.2.2.2.5.1.7
+                        l-.5.8
+                        c.8 1.2 1.5 1.8 2.8 2.5
+                        l.7-.5
+                        c.2-.2.5-.2.7 0
+                        l1 1
+                        c.3.3.3.6-.1.9
+                        l-.7.5
+                        c-.5.3-1.1.4-1.7.2
+                        -2.5-.9-4.5-2.9-5.4-5.4
+                        -.2-.6-.1-1.2.2-1.7
+                        l.5-.7z
+                    "/>
+
+                </svg>
+
+            </div>
+
+            <div>
+
+                <div class="contact-name">
+                    WhatsApp
+                </div>
+
+                <div class="contact-detail">
+                    Start a conversation
+                </div>
+
+            </div>
+
+        </a>
+
+
+        <!-- LINKEDIN -->
+
+        <a
+            class="contact-card"
+            href="https://www.linkedin.com/in/north-corporation-6a3015211"
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+
+            <div class="contact-icon">
+
+                <svg
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                >
+
+                    <path d="
+                        M5.2 7.5
+                        A1.7 1.7 0 1 0 5.2 4
+                        a1.7 1.7 0 0 0 0 3.5z
+
+                        M3.7 9h3v10h-3V9z
+
+                        M8.6 9h2.9v1.4h.1
+                        c.4-.8 1.4-1.7 3-1.7
+                        3.2 0 3.8 2 3.8 4.7V19h-3v-5
+                        c0-1.2 0-2.8-1.7-2.8
+                        -1.7 0-2 1.3-2 2.7V19h-3V9z
+                    "/>
+
+                </svg>
+
+            </div>
+
+            <div>
+
+                <div class="contact-name">
+                    LinkedIn
+                </div>
+
+                <div class="contact-detail">
+                    NORTH CORPORATION
+                </div>
+
+            </div>
+
+        </a>
+
+
+        <!-- INSTAGRAM -->
+
+        <a
+            class="contact-card"
+            href="https://www.instagram.com/northcorporation/"
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+
+            <div class="contact-icon">
+
+                <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.7"
+                >
+
+                    <rect
+                        x="4"
+                        y="4"
+                        width="16"
+                        height="16"
+                        rx="4"
+                    />
+
+                    <circle
+                        cx="12"
+                        cy="12"
+                        r="3.5"
+                    />
+
+                    <circle
+                        cx="17.2"
+                        cy="6.8"
+                        r="0.8"
+                        fill="currentColor"
+                        stroke="none"
+                    />
+
+                </svg>
+
+            </div>
+
+            <div>
+
+                <div class="contact-name">
+                    Instagram
+                </div>
+
+                <div class="contact-detail">
+                    @northcorporation
+                </div>
+
+            </div>
+
+        </a>
+
+
+        <!-- WEBSITE -->
+
+        <div class="contact-card">
+
+            <div class="contact-icon">
+
+                <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.7"
+                >
+
+                    <circle
+                        cx="12"
+                        cy="12"
+                        r="8.5"
+                    />
+
+                    <path d="
+                        M3.8 12h16.4
+
+                        M12 3.5
+                        c2 2.2 3 5 3 8.5
+                        s-1 6.3-3 8.5
+
+                        c-2-2.2-3-5-3-8.5
+                        s1-6.3 3-8.5z
+                    "/>
+
+                </svg>
+
+            </div>
+
+            <div>
+
+                <div class="contact-name">
+                    Website
+                </div>
+
+                <div class="contact-detail">
+                    Coming soon
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     FINAL STATEMENT
+===================================================== -->
+
+<section class="final">
+
+    <div class="final-label">
+        NORTH CORPORATION · DIRECTION FOR IDEAS
+    </div>
+
+
+    <h2 class="final-title">
+        LET'S BUILD<br>
+        <em>WHAT'S NEXT.</em>
+    </h2>
+
+
+    <div class="final-mountains">
+
+        <div class="final-mountain"></div>
+
+        <div class="final-mountain-two"></div>
+
+    </div>
+
+
+    <div class="footer">
+        © NORTH CORPORATION · ADITYA GUPTA · STRATEGY DIRECTOR
+    </div>
+
+</section>
+
+
+</div>
+
+
+
+<script>
+
+function toggleCapability(button) {
+
+    const capability = button.parentElement;
+    const content = capability.querySelector(".capability-content");
+
+    if (capability.classList.contains("open")) {
+
+        capability.classList.remove("open");
+        content.style.maxHeight = null;
+
+    } else {
+
+        document
+            .querySelectorAll(".capability.open")
+            .forEach(item => {
+
+                item.classList.remove("open");
+
+                item.querySelector(
+                    ".capability-content"
+                ).style.maxHeight = null;
+
+            });
+
+        capability.classList.add("open");
+
+        content.style.maxHeight =
+            content.scrollHeight + "px";
+    }
+}
+
+</script>
 
 </body>
 </html>
